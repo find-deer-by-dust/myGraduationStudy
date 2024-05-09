@@ -1,4 +1,7 @@
 /doc/*
 /csv/*
-/*.xlsx
-/*.tmp
+*.xlsx
+*.tmp
+*.doc
+*.csv
+test*

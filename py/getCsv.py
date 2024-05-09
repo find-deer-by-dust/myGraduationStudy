@@ -5,7 +5,7 @@ import os
 import datetime
 import pandas as pd
 
-
+# 获得GDELT的数据集
 
 def downloadCsv(time):
     print(time)
@@ -26,7 +26,7 @@ def downloadCsv(time):
         df=df[[1,29,30,31,34]]
         df.to_csv('./csv/'+filename,index=False,header=None)
     except:
-        1
+        pass
     
 
 # 2015-02-18 23:00:00
