@@ -1,9 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def all2Date2Date(start_date,end_date):
-    # 指定 CSV 文件路径
-    csv_file_path = './newCsv/all.csv'
+def all2Date2Date(start_date,end_date,csv_file_path = './newCsv/20160101_to_20230101.csv'):
 
     # 指定每次读取的行数
     chunk_size = 10000000
@@ -11,7 +9,7 @@ def all2Date2Date(start_date,end_date):
     # 使用 Pandas 分块读取 CSV 文件
     reader = pd.read_csv(csv_file_path, chunksize=chunk_size, header=None)
 
-    fileName=start_date+"_to_"+end_date+".csv"
+    fileName=str(start_date)+"_to_"+str(end_date)+".csv"
 
     # 逐块读取并打印部分内容
     for chunk in reader:
@@ -26,10 +24,13 @@ def all2Date2Date(start_date,end_date):
 
 
 def Date2Date2sizeDate2Date(start_date,end_date,size):
-
+    
+    start_date=str(start_date)
+    end_date=str(end_date)
     size=int(size)
+    
     file='./newCsv/'+start_date+"_to_"+end_date+".csv"
-    newFile='./newCsv/'+size+'_'+start_date+"_to_"+end_date+".csv"
+    newFile='./newCsv/'+str(size)+'_'+start_date+"_to_"+end_date+".csv"
 
     df=pd.read_csv(file, header=None)
     print(df.head())
@@ -66,9 +67,10 @@ def Date2Date2sizeDate2Date(start_date,end_date,size):
 
 
 
-start_date = 20160101
-end_date = 20170101
-size=1+10*(60/15)*24
+start_date = 20180101
+end_date = 20190601
+size=1+100*(60/15)*24
 
 all2Date2Date(start_date,end_date)
+
 Date2Date2sizeDate2Date(start_date,end_date,size)
