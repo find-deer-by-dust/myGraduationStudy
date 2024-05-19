@@ -1,5 +1,6 @@
 /doc/*
 /csv/*
+/png/*
 *.xlsx
 *.tmp
 *.doc
