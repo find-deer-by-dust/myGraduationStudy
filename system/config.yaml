@@ -1,0 +1,19 @@
+cookie:
+  expiry_days: 0
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    lcy:
+      email: 123@qq.com
+      failed_login_attempts: 1
+      logged_in: false
+      name: lcy
+      password: $2b$12$YwGgcmz4L22zXE3hpXjixuAH3Mbacvy.Q7Y2RCchd5du7O2RYTJN6
+    zqq:
+      email: 1111@qq.com
+      name: zqq
+      password: $2b$12$1MbL/fOmkaJVPniqPIGM6OrkFW6msyScKpxSldmLtPXapLWXCKJyS
+pre-authorized:
+  emails:
+  - melsby@gmail.com

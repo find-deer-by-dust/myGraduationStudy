@@ -1,0 +1,11 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+ cd C:\Users\19151\venv\Scripts
+
+.\Activate
+
+cd D:\code\myGraduationStudy\system
+
+
+streamlit run "D:\code\myGraduationStudy\system\home.py"
+
